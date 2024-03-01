@@ -71,6 +71,54 @@ def sorteerimine(i:list,p:list):
                 p[m],p[n]=p[n],p[m]
                 i[m],i[n]=i[n],i[m]
     return i,p
+def vordsed_palgad(i:list,p:list)->list:
+    """Funktsiioon kes saavad võrdset palka.
+    :param list i: Inimeste järjend
+    :param list p:  Palgate järjend
+    :rtype: list,list
+    """
+    for id_, palgad in enumerate(p):
+        print(id_,palgad)
+    for palk in p:
+        n=p.count(palk)
+        ind=p.index(palk) 
+        if n>1:
+            subnimed=[] 
+            for j in range(n):
+                nimi=i[p.index(palk,ind)]
+                subnimed.append(nimi) 
+                p.pop(ind)
 
+
+def otsi_nime_järgi(i:list,p:list)->list:
+    """"Funktsiioon 
+    :param list i: Inimeste järjend
+    :param list p:  Palgate järjend
+    :rtype: list,list
+    """
+    palgad={}
+    nimi=input("nimi: ")
+    for nimi in i:
+        n=i.count(nimi)
+        ind=i.index(nimi)
+        if n>1:
+            subp=[] 
+            for j in range(n):
+                palk=p[i.index(nimi,ind)] 
+                subp.pop
+                p.pop(ind)
+                i.pop(ind)
+                ind=+1
+            palgad[palk]=subp
+
+
+
+def inimeste_nimikiri():
+    """Funktsioon tagastab uuendatud loendid, kus lisatud inimesi ja palka
+    :param list i: inimeste järjend
+    :param list p: Palgate järjend
+    :param list n: inimeste arv
+    :rtype: list,list
+    """
 
 
